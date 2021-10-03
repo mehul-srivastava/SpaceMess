@@ -15,4 +15,4 @@ After cloning it move to the root directory and run the following commands:
 
 On running the install command, wait for a few minutes for the project to download cypress package and after running the serve command you have to wait for a few seconds before the project opens up.
 
-If you have any issues, let us know so we can help you solve that at the earliest
+If you have any issues, let us know so we can help you solve that at the earliest :)
