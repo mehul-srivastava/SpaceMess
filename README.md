@@ -1,5 +1,5 @@
 # SpaceMess
-Project submission for NASA Space Apps Challenge 2021
+Project submission for NASA Space Apps Challenge 2021 || Mapping Space Trash In Real Time
 <br><br>
 # How To Run The Project
 - STEP 1:<br>
