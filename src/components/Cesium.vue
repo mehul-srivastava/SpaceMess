@@ -133,6 +133,19 @@
           {{ name }}
         </label>
       </div>
+      <div v-show="menu.about" class="toolbarSwitches">
+            <div class="toolbarTitle">
+                    About      
+            </div>
+        <br>
+        <p><center>There are approximately 23,000 pieces of debris larger than a softball orbiting the Earth. They travel at speeds up to 17,500 mph, fast enough for a relatively small piece of orbital debris to damage a satellite or a spacecraft. There are half a million pieces of debris the size of a marble or larger (up to 0.4 inches, or 1 centimeter) or larger, and approximately 100 million pieces of debris about .04 inches (or one millimeter) and larger. There is even more smaller micrometer-sized (0.000039 of an inch in diameter) debris.</center></p>
+        <br>
+        <p><center>Even tiny paint flecks can damage a spacecraft when traveling at these velocities. A number of space shuttle windows were replaced because of damage caused by material that was analyzed and shown to be paint flecks. In fact, millimeter-sized orbital debris represents the highest mission-ending risk to most robotic spacecraft operating in low Earth orbit.</center></p>
+        <br>
+        <p><center>The Department of Defense maintains a highly accurate satellite catalog on objects in Earth orbit. Most of the cataloged objects are larger than a softball (approximately 10 centimeters).</center></p>
+        <br>
+        <p><center><a style="color: white;" href=https://www.nasa.gov/mission_pages/station/news/orbital_debris.html target="_blank"> Source: NASA - Space Debris and Human Spacecraft </a></center></p>
+      </div>
       <div v-show="menu.ios" class="toolbarSwitches">
         <div class="toolbarTitle">
           Mobile
@@ -205,6 +218,13 @@
       </div>
     </div>
     <div id="toolbarRight">
+           <b-tooltip label="Satellite selection" :triggers="tooltipTriggers" position="is-right">
+          <button type="button" class="cesium-button cesium-toolbar-button" @click="toggleMenu('about')">
+            <span class="icon fill-parent">
+              <i class="fas fa-info "></i>
+            </span>
+          </button>
+        </b-tooltip>
       <b-tooltip label="Toggle UI" :triggers="tooltipTriggers" position="is-left">
         <button type="button" class="cesium-button cesium-toolbar-button" @click="toggleUI">
           <span class="icon fill-parent">
@@ -243,6 +263,7 @@ export default {
         map: false,
         ios: false,
         dbg: false,
+        about:false
       },
       showUI: true,
       imageryProvider: "OfflineHighres",
